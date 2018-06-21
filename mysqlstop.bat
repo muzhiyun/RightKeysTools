@@ -1,5 +1,6 @@
 @echo off
 mode con cols=60 lines=10
+REM 定义窗口大小
 cd /d "%~dp0"
 cacls.exe "%SystemDrive%\System Volume Information" >nul 2>nul
 if %errorlevel%==0 goto Admin
@@ -9,10 +10,14 @@ echo RequestUAC.ShellExecute "%~s0","","","runas",1 >>"%temp%\getadmin.vbs"
 echo WScript.Quit >>"%temp%\getadmin.vbs"
 "%temp%\getadmin.vbs" /f
 if exist "%temp%\getadmin.vbs" del /f /q "%temp%\getadmin.vbs"
+REM 以管理员身份运行
 exit
 
 :Admin
 mode con cols=60 lines=10
+
+REM 请修改下方的mysql为你的服务项名称
 net stop mysql
+
 if exist "%temp%\getadmin.vbs" del /f /q "%temp%\getadmin.vbs"
 exit
