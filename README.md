@@ -2,7 +2,7 @@
 Win10下批处理+注册表的一些小工具
 学习jsp开发，因而装了Tomcat9和MySQL，日常需要命令行启动停止，个人一直认为计算机如果不是为了减轻人类工作量，那么开发将毫无意义。于是萌生了把MySQL的启动停止等功能集成在鼠标右键
 谷歌搜索后好像没有类似的解决方案，只有鼠标右键集成注销重启等一些例程，学习一些注册表的导入导出后开始仿照着做出雏形  同理可用于启动任何Windows服务项，实现效果如下
-![image](http://github.com/muzhiyun/RightKeysTools/raw/master/images/demo.png)
+![image](https://github.com/muzhiyun/RightKeysTools/blob/master/demo.png)
 
 在桌面空白处右击即可完成启动停止Windows服务项。
 
